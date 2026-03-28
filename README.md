@@ -61,7 +61,7 @@ my-personal-card/
 
 ### 自訂內容建議
 
-- **文字與連結**：編輯 `src/constants/content.js`（姓名、自介、GitHub／LinkedIn 等）。
+- **文字與連結**：編輯 `src/constants/content.js`（姓名、自介、GitHub／LinkedIn 等）。大頭貼下方標語為 `TAGLINE` 物件（`headline`、`role`、`skills` 陣列），技能會以標籤列顯示。
 - **大頭照**：將圖片放到 `public/image/`，並在 `content.js` 的 `AVATAR_SRC` 使用對應路徑（例如 `/image/1.jpg`）。
 
 ## 部署方式

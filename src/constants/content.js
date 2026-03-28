@@ -2,10 +2,18 @@
 export const AVATAR_SRC = "/image/1.jpg";
 export const AVATAR_ALT = "大頭照佔位";
 
-export const TAGLINE = `B.S. in CSIE @ NTNU | Incoming Graduate Student
-Computer Vision & Signal Processing Researcher
-Data Analysis · Machine Learning · System Design · Automation Testing · LLM & RAG · Software Engineering
-`;
+export const TAGLINE = {
+  headline: "B.S. in CSIE @ NTNU | Incoming Graduate Student",
+  role: "Computer Vision & Signal Processing Researcher",
+  skills: [
+    "Data Analysis",
+    "Machine Learning",
+    "System Design",
+    "Automation Testing",
+    "LLM & RAG",
+    "Software Engineering",
+  ],
+};
 
 export const FULL_NAME = "傅靖嘉 (Jing-Jia Fu)";
 export const BADGE_TEXT = "My Personal Card";

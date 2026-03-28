@@ -8,7 +8,7 @@ function prefersReducedMotion() {
   );
 }
 
-export function useTypingEffect(fullText, { speed = 15, startDelay = 350 } = {}) {
+export function useTypingEffect(fullText, { speed = 10, startDelay = 200 } = {}) {
   const [text, setText] = useState(() => (prefersReducedMotion() ? fullText : ""));
 
   useEffect(() => {

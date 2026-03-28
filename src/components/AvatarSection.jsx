@@ -15,7 +15,18 @@ export function AvatarSection({ tagline }) {
           />
         </div>
       </div>
-      <p className="tagline">{tagline}</p>
+
+      <div className="tagline-block">
+        <p className="tagline-headline">{tagline.headline}</p>
+        <p className="tagline-role">{tagline.role}</p>
+        <ul className="tagline-skills" aria-label="Skills and focus areas">
+          {tagline.skills.map((item) => (
+            <li key={item} className="tagline-chip">
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
