@@ -34,25 +34,9 @@ function LinkedInIcon() {
   );
 }
 
-function InstagramIcon() {
-  return (
-    <svg className="btn-ico" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <rect x="7" y="7" width="10" height="10" rx="3" stroke="currentColor" strokeWidth="1.8" />
-      <path d="M16.8 7.2h.01" stroke="currentColor" strokeWidth="3.4" strokeLinecap="round" />
-      <path
-        d="M3.8 12c0-3.5 0-5.2 1-6.2s2.7-1 6.2-1s5.2 0 6.2 1s1 2.7 1 6.2s0 5.2-1 6.2s-2.7 1-6.2 1s-5.2 0-6.2-1s-1-2.7-1-6.2Z"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
 const icons = {
   github: GitHubIcon,
   linkedin: LinkedInIcon,
-  instagram: InstagramIcon,
 };
 
 export function SocialLinks({ emailButton }) {

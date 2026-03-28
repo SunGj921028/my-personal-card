@@ -14,7 +14,7 @@ export default function App() {
       <BackgroundBlobs />
 
       <main className="wrap">
-        <section className="shell" aria-label="My Digital Identity Card">
+        <section className="shell" aria-label="My Personal Card">
           <div className="topbar">
             <ThemeToggle isDark={isDark} onToggle={toggle} />
           </div>

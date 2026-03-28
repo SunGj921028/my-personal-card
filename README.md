@@ -63,7 +63,7 @@ my-personal-card/
 
 ### 自訂內容建議
 
-- **文字與連結**：編輯 `src/constants/content.js`（姓名、自介、GitHub／LinkedIn／Instagram、Email 等）。
+- **文字與連結**：編輯 `src/constants/content.js`（姓名、自介、GitHub／LinkedIn、Email 等）。
 - **大頭照**：將圖片放到 `public/image/`，並在 `content.js` 的 `AVATAR_SRC` 使用對應路徑（例如 `/image/1.jpg`）。
 
 ## 部署方式
