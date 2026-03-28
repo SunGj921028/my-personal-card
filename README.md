@@ -11,8 +11,8 @@
 
 ### 需求
 
-- [Node.js](https://nodejs.org/)（建議 LTS 版本）
-- npm（隨 Node 安裝）
+- [Node.js](https://nodejs.org/)
+- npm
 
 ### 安裝與指令
 
