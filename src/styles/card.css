@@ -169,13 +169,14 @@
 }
 
 .tagline {
-  font-size: 12.5px;
+  font-size: 11.5px;
   color: var(--muted);
   line-height: 1.5;
-  text-align: center;
-  max-width: 240px;
+  text-align: left;
+  max-width: 320px;
   position: relative;
   z-index: 1;
+  white-space: pre-line;
 }
 
 /* Text Area: Typing Effect */
@@ -214,7 +215,7 @@
 
 .typing-label {
   margin: 0;
-  font-size: 14px;
+  font-size: 13px;
   color: var(--muted);
   font-weight: 650;
   letter-spacing: 0.2px;
@@ -222,7 +223,7 @@
 
 .intro {
   margin: 0;
-  font-size: clamp(15.5px, 1.9vw, 18.5px);
+  font-size: clamp(12.5px, 1.9vw, 15.5px);
   line-height: 1.7;
   color: var(--text);
   font-weight: 620;
