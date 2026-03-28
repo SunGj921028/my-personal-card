@@ -1,0 +1,23 @@
+/* Main Layout (Responsive Web Design) */
+.wrap {
+  display: grid;
+  place-items: center;
+  padding: clamp(16px, 3vw, 32px);
+  min-height: 100vh;
+}
+
+.shell {
+  width: min(980px, 100%);
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  padding: 2px 4px;
+}
