@@ -34,7 +34,7 @@ my-personal-card/
 ├── vite.config.js          # Vite 設定
 ├── package.json
 ├── public/                 # 靜態資源，會原樣複製到網站根目錄
-│   └── image/              # 大頭照等，例如 1.jpg → 網址 /image/1.jpg
+│   └── image/              # 大頭照等
 ├── src/
 │   ├── main.jsx            # React 進入點
 │   ├── App.jsx             # 根元件（版面、主題、Toast）
@@ -58,7 +58,7 @@ my-personal-card/
 │       ├── layout.css
 │       ├── card.css
 │       └── ui.css
-└── dist/                   # `npm run build` 產出（勿手動維護，可加入 .gitignore）
+└── dist/
 ```
 
 ### 自訂內容建議
