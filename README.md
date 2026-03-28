@@ -37,19 +37,17 @@ my-personal-card/
 │   └── image/              # 大頭照等
 ├── src/
 │   ├── main.jsx            # React 進入點
-│   ├── App.jsx             # 根元件（版面、主題、Toast）
+│   ├── App.jsx             # 根元件（版面、主題）
 │   ├── constants/
-│   │   └── content.js      # 文案、連結、Email、大頭照路徑（主要改這裡）
+│   │   └── content.js      # 文案、連結、大頭照路徑（主要改這裡）
 │   ├── components/         # UI 區塊元件
 │   │   ├── BackgroundBlobs.jsx
 │   │   ├── ThemeToggle.jsx
 │   │   ├── PersonalCard.jsx
 │   │   ├── AvatarSection.jsx
-│   │   ├── SocialLinks.jsx
-│   │   ├── EmailButton.jsx
-│   │   └── Toast.jsx
-│   ├── hooks/              # 自訂 Hooks（主題、打字、卡片傾斜、Toast）
-│   ├── utils/              # 小工具（剪貼簿、按鈕光暈）
+│   │   └── SocialLinks.jsx
+│   ├── hooks/              # 自訂 Hooks（主題、打字、卡片傾斜）
+│   ├── utils/              # 小工具（按鈕光暈）
 │   └── styles/             # 樣式（依區塊拆分多個 CSS 檔）
 │       ├── index.css       # 匯入其餘樣式
 │       ├── variables.css   # CSS 變數與深色主題
@@ -63,7 +61,7 @@ my-personal-card/
 
 ### 自訂內容建議
 
-- **文字與連結**：編輯 `src/constants/content.js`（姓名、自介、GitHub／LinkedIn、Email 等）。
+- **文字與連結**：編輯 `src/constants/content.js`（姓名、自介、GitHub／LinkedIn 等）。
 - **大頭照**：將圖片放到 `public/image/`，並在 `content.js` 的 `AVATAR_SRC` 使用對應路徑（例如 `/image/1.jpg`）。
 
 ## 部署方式

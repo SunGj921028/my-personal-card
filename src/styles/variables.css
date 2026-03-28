@@ -23,9 +23,6 @@
   --badge-bg: rgba(99, 102, 241, 0.14);
   --badge-stroke: rgba(79, 70, 229, 0.28);
   --badge-text: rgba(30, 41, 59, 0.92);
-
-  --toast-bg: rgba(2, 6, 23, 0.78);
-  --toast-text: rgba(255, 255, 255, 0.95);
 }
 
 body[data-theme="dark"] {
@@ -48,7 +45,4 @@ body[data-theme="dark"] {
   --badge-bg: rgba(255, 255, 255, 0.1);
   --badge-stroke: rgba(255, 255, 255, 0.22);
   --badge-text: rgba(229, 231, 235, 0.88);
-
-  --toast-bg: rgba(2, 6, 23, 0.86);
-  --toast-text: rgba(255, 255, 255, 0.96);
 }

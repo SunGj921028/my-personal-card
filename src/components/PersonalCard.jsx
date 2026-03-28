@@ -1,5 +1,4 @@
 import { AvatarSection } from "./AvatarSection.jsx";
-import { EmailButton } from "./EmailButton.jsx";
 import { SocialLinks } from "./SocialLinks.jsx";
 import { useCardTilt } from "../hooks/useCardTilt.js";
 import { useTypingEffect } from "../hooks/useTypingEffect.js";
@@ -10,7 +9,7 @@ import {
   TYPING_INTRO,
 } from "../constants/content.js";
 
-export function PersonalCard({ onShowToast }) {
+export function PersonalCard() {
   const { cardRef, glareRef } = useCardTilt();
   const typingText = useTypingEffect(TYPING_INTRO);
 
@@ -35,7 +34,7 @@ export function PersonalCard({ onShowToast }) {
                 <span className="cursor" aria-hidden="true" />
               </p>
 
-              <SocialLinks emailButton={<EmailButton onShowToast={onShowToast} />} />
+              <SocialLinks />
             </div>
           </div>
         </div>

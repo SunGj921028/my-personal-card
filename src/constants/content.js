@@ -5,7 +5,7 @@ export const AVATAR_ALT = "大頭照佔位";
 export const TAGLINE = `台師大資工系大四生．41147005S．
 UI/UX 微互動．玻璃視覺．
 3D 傾斜．主題切換．
-打字機與 Toast`;
+打字機互動`;
 
 export const FULL_NAME = "傅靖嘉 (Jing-Jia Fu)";
 export const BADGE_TEXT = "My Personal Card";
@@ -25,8 +25,6 @@ export const SOCIAL_LINKS = [
     href: "https://www.linkedin.com/in/%E9%9D%96%E5%98%89-%E5%82%85-628737303/",
   },
 ];
-
-export const EMAIL = "sungj921028@gmail.com";
 
 /** Inline SVG placeholder when image missing or fails */
 export const AVATAR_PLACEHOLDER_SVG =

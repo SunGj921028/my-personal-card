@@ -39,7 +39,7 @@ const icons = {
   linkedin: LinkedInIcon,
 };
 
-export function SocialLinks({ emailButton }) {
+export function SocialLinks() {
   const wrapRef = useRef(null);
 
   useEffect(() => {
@@ -67,7 +67,6 @@ export function SocialLinks({ emailButton }) {
           </a>
         );
       })}
-      {emailButton}
     </div>
   );
 }
