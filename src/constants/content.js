@@ -6,12 +6,12 @@ export const TAGLINE = {
   headline: "B.S. in CSIE @ NTNU | Incoming Graduate Student",
   role: "Computer Vision & Signal Processing Researcher",
   skills: [
-    "Data Analysis",
-    "Machine Learning",
     "System Design",
+    "Signal Processing",
     "Automation Testing",
-    "LLM & RAG",
     "Software Engineering",
+    "Full-Stack Development",
+    "ML, LLM & RAG",
   ],
 };
 
