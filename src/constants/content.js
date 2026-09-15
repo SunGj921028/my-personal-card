@@ -7,9 +7,9 @@ export const TAGLINE = {
   role: "Computer Vision & Robotics Researcher",
   skills: [
     "Systems & Software Engineering",
-    "Hardware–Software Integration",
-    "Architecture Design & Optimization",
-    "DevOps & Observability",
+    "DevOps",
+    "HW/SW Integration",
+    "Architecture Design",
     "Full-Stack Development",
     "AI, ML, LLM & RAG",
   ],
