@@ -3,15 +3,15 @@ export const AVATAR_SRC = "/image/1.jpg";
 export const AVATAR_ALT = "大頭照佔位";
 
 export const TAGLINE = {
-  headline: "B.S. in CSIE @ NTNU | Incoming Graduate Student",
-  role: "Computer Vision & Signal Processing Researcher",
+  headline: "M.S. in EE @ NTU | S.W Engineer Intern at Garmin",
+  role: "Computer Vision & Robotics Researcher",
   skills: [
-    "System Design",
-    "Signal Processing",
-    "Automation Testing",
-    "Software Engineering",
+    "Systems & Software Engineering",
+    "Hardware–Software Integration",
+    "Architecture Design & Optimization",
+    "DevOps & Observability",
     "Full-Stack Development",
-    "ML, LLM & RAG",
+    "AI, ML, LLM & RAG",
   ],
 };
 
@@ -19,7 +19,7 @@ export const FULL_NAME = "傅靖嘉 (Jing-Jia Fu)";
 export const BADGE_TEXT = "My Personal Card";
 
 export const TYPING_INTRO =
-  "As an incoming graduate student passionate about Computer Vision and signal processing, I bridge the gap between AI research and software engineering. Experienced in leveraging LLM and RAG to optimize automated testing, coupled with the ability to independently build end-to-end web applications and software systems. I am driven to turn complex algorithms into real-world applications that create value for the team.";
+  "I am a master's student with a background in computer science, currently exploring research in tactile sensing, robotics, and Vision-Language-Action (VLA) models. My interests span systems software, high-performance computing, AI, and signal processing, with hands-on experience in C/C++, CUDA, concurrent systems, performance profiling, and AI-powered software tools. I enjoy turning algorithms and research ideas into efficient, practical software systems."
 
 export const SOCIAL_LINKS = [
   {
