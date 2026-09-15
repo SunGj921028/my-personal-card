@@ -1,99 +1,112 @@
 # My Personal Card
 
-我的個人數位名片頁面，使用 **React** 與 **Vite** 建置，支援淺／深色主題、打字機自介、玻璃擬態卡片與 3D 傾斜等互動。
+My personal digital business card, built with **React** and **Vite**. It supports light and dark themes, a typing effect for the introduction, a glassmorphism card, and interactive 3D tilt effects.
 
 ## Tech Stack
 
 - [React 19](https://react.dev/)
 - [Vite 6](https://vite.dev/)
 
-## 本機開發
+## Local Development
 
-### 需求
+### Requirements
 
 - [Node.js](https://nodejs.org/)
 - npm
 
-### 安裝與指令
+### Installation and Scripts
 
 ```bash
 npm install
 ```
 
-| 指令 | 說明 |
-|------|------|
-| `npm run dev` | 啟動開發伺服器（預設 `http://localhost:5173`） |
-| `npm run build` | 產出正式環境靜態檔至 `dist/` |
-| `npm run preview` | 在本機預覽建置結果（需先執行 `build`） |
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Starts the development server (default: `http://localhost:5173`) |
+| `npm run build` | Builds the production-ready static files into `dist/` |
+| `npm run preview` | Previews the production build locally (run `build` first) |
+| `npm run deploy` | Builds the project and publishes `dist/` to the `gh-pages` branch |
 
-## 檔案架構
+## Project Structure
 
 ```
 my-personal-card/
-├── index.html              # HTML 入口（掛載 #root）
-├── vite.config.js          # Vite 設定
+├── index.html              # HTML entry point (mounts #root)
+├── vite.config.js          # Vite configuration
 ├── package.json
-├── public/                 # 靜態資源，會原樣複製到網站根目錄
-│   └── image/              # 大頭照等
+├── public/                 # Static assets copied to the website root as-is
+│   └── image/              # Profile images and other image assets
 ├── src/
-│   ├── main.jsx            # React 進入點
-│   ├── App.jsx             # 根元件（版面、主題）
+│   ├── main.jsx            # React entry point
+│   ├── App.jsx             # Root component (layout and theme)
 │   ├── constants/
-│   │   └── content.js      # 文案、連結、大頭照路徑（主要改這裡）
-│   ├── components/         # UI 區塊元件
+│   │   └── content.js      # Text, links, and profile image path (edit this first)
+│   ├── components/         # UI section components
 │   │   ├── BackgroundBlobs.jsx
 │   │   ├── ThemeToggle.jsx
 │   │   ├── PersonalCard.jsx
 │   │   ├── AvatarSection.jsx
 │   │   └── SocialLinks.jsx
-│   ├── hooks/              # 自訂 Hooks（主題、打字、卡片傾斜）
-│   ├── utils/              # 小工具（按鈕光暈）
-│   └── styles/             # 樣式（依區塊拆分多個 CSS 檔）
-│       ├── index.css       # 匯入其餘樣式
-│       ├── variables.css   # CSS 變數與深色主題
+│   ├── hooks/              # Custom hooks (theme, typing, and card tilt)
+│   ├── utils/              # Small utilities (button glow effect)
+│   └── styles/             # Stylesheets split by UI section
+│       ├── index.css       # Imports the other stylesheets
+│       ├── variables.css   # CSS variables and dark theme
 │       ├── base.css
 │       ├── background.css
 │       ├── layout.css
 │       ├── card.css
 │       └── ui.css
-└── dist/
+└── dist/                   # Generated production output (ignored by Git)
 ```
 
-### 自訂內容建議
+### Customizing Content
 
-- **文字與連結**：編輯 `src/constants/content.js`（姓名、自介、GitHub／LinkedIn 等）。大頭貼下方標語為 `TAGLINE` 物件（`headline`、`role`、`skills` 陣列），技能會以標籤列顯示。
-- **大頭照**：將圖片放到 `public/image/`，並在 `content.js` 的 `AVATAR_SRC` 使用對應路徑（例如 `/image/1.jpg`）。
+- **Text and links:** Edit `src/constants/content.js` to update the name, introduction, GitHub, LinkedIn, and other links. The tagline below the profile image is defined in the `TAGLINE` object (`headline`, `role`, and the `skills` array); skills are displayed as tags.
+- **Profile image:** Place an image in `public/image/`, then set the corresponding path in `content.js` through `AVATAR_SRC` (for example, `/image/1.jpg`).
 
-## 部署方式
+## Deployment
 
-此專案為 **純前端靜態網站**，建置後只需上傳 `dist/` 目錄內的檔案到任一靜態主機。
+This is a **static frontend website**. After the project is built, the files in `dist/` can be published to any static hosting provider.
 
-### 1. 建置
+### Build
 
 ```bash
 npm run build
 ```
 
-產物在專案根目錄的 `dist/`。
+The generated files are placed in `dist/` at the project root.
 
-### 2. 常見部署選項
+### GitHub Pages
 
-| 平台 | 作法摘要 |
-|------|----------|
-| **GitHub Pages** | 將儲存庫接上 Pages；若網址為 `https://<user>.github.io/<repo>/`，需在 `vite.config.js` 設定 `base: '/<repo>/'` 後再建置。 |
-| **Netlify / Vercel** | 連結 Git 儲存庫：建置指令 `npm run build`，發布目錄 `dist`。 |
-| **Cloudflare Pages** | 同上，輸出目錄選 `dist`。 |
-| **自有主機 / NAS** | 將 `dist/` 內容上傳到網站根目錄或子目錄；若放在子目錄，同樣需設定 Vite `base`。 |
+This repository includes a deployment script that publishes the build output to the `gh-pages` branch:
 
-### 子路徑部署（非網站根目錄）
+```bash
+npm run deploy
+```
 
-若網址不是 `https://網域/` 而是 `https://網域/子路徑/`，在 `vite.config.js` 加入：
+The script runs `npm run build` first, then publishes `dist/` using `gh-pages`. The Vite `base` path is already configured as `/my-personal-card/` for the repository URL:
+`https://sungj921028.github.io/my-personal-card/`.
+
+Pushing commits to `main` alone does not run this deployment script. After changing the source code, run `npm run deploy` to update the live GitHub Pages site. If you later add a GitHub Actions workflow or configure Pages to build directly from `main`, the deployment behavior may change.
+
+### Other Hosting Options
+
+| Platform | Summary |
+|----------|---------|
+| **Netlify / Vercel** | Connect the Git repository, use `npm run build` as the build command, and set `dist` as the publish/output directory. |
+| **Cloudflare Pages** | Use `npm run build` as the build command and `dist` as the output directory. |
+| **Self-hosted server / NAS** | Upload the contents of `dist/` to the website root or a subdirectory. If it is hosted in a subdirectory, configure the Vite `base` path accordingly. |
+
+### Deploying to a Subpath
+
+If the site URL is `https://domain/subpath/` instead of `https://domain/`, add the following to `vite.config.js`:
 
 ```js
 export default defineConfig({
-  base: '/子路徑/',
+  base: '/subpath/',
   plugins: [react()],
 });
 ```
 
-再重新執行 `npm run build`。
+Then run `npm run build` again.
